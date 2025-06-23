@@ -34,5 +34,6 @@ bwa index $GENOME
 
 # Step 7: Align hybrid reads to the genome
 /usr/local/packages/bwa-0.7.17/bin/bwa mem $GENOME $OUTDIR/hybrid_R1.fastq $OUTDIR/hybrid_R2.fastq > $OUTDIR/hybrids_vs_genome.sam
+samtools view -h hybrids_vs_genome.sam | samtools sort -o hybrids_vs_genome.bam
 
-echo "✅ Done. Review $OUTDIR/hybrids_vs_genome.sam for insertion site analysis."
+echo "✅ Done. Review $OUTDIR/hybrids_vs_genome.bam for insertion site analysis."
