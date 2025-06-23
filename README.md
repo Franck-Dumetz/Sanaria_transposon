@@ -1,7 +1,7 @@
 # Sanaria_transposon
 
 Bioproject <br />
-\t Biosample <br />
+\tBiosample <br />
 \t\t SRA <br />
 
 Number of reads
