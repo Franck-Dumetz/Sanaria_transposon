@@ -18,6 +18,8 @@ bwa index $TRANSPOSON
 # Step 3: Convert to BAM and sort
 samtools view -Sb $OUTDIR/reads_vs_transposon.sam | samtools sort -o $OUTDIR/reads_vs_transposon.bam
 
+rm $OUTDIR/reads_vs_transposon.sam
+
 # Step 4: Extract read pairs where at least one read is partially mapped (e.g., soft-clipped)
 samtools view -h $OUTDIR/reads_vs_transposon.bam | \
   awk 'BEGIN{OFS="\t"} $1 ~ /^@/ || $6 ~ /S/ || $6 ~ /H/' | \
