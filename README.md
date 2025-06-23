@@ -2,7 +2,7 @@
 
 Publication: <br />
 
-Bioproject <br />
+Bioproject PRJNA1281180 <br />
 Biosample <br />
 SRA <br />
 
