@@ -3,7 +3,7 @@
 Publication: <br />
 
 Bioproject PRJNA1281180 <br />
-Biosample <br />
+Biosample SAMN49549112<br />
 SRA <br />
 
 ## Transposon insertion in _Anopheles stephensi_
