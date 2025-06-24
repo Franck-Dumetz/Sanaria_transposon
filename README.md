@@ -35,6 +35,11 @@ samtools view -c -F 4 Astephensi_sorted.bam
 Use [Hydrid_reads_finding.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/Hydrid_reads_finding.sh) to identify the hybrid reads <br />
 
 Using ngs_te_mapper2 to map transposable elements:
+Index the reference genome
+```
+bwa index /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta
+samtools faidx /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta
+```
 Create a local writable RepeatMasker library
 ```
 mkdir -p ~/RepeatMasker_Lib
