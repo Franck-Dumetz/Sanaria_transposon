@@ -11,7 +11,7 @@ SRA <br />
 bwa index Driver_insert.fasta
 bwa index VectorBase-68_AstephensiSDA-500_Genome.fasta
 ```
-Use (DNAseq_mapping_BWA)[] <br />
+Use (DNAseq_mapping_BWA)[https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/DNAseq_mapping_BWA] <br />
 ## Transposon insertion in _Anopheles stephensi_
 
 Number of reads 
