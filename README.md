@@ -8,7 +8,7 @@ SRA <br />
 
 Programs: <br />
 * BWA v0.7.17 <br />
-* ngs_te_mapper2 <br />
+* [ngs_te_mapper2](https://github.com/bergmanlab/ngs_te_mapper2) <br />
 * Samtools v1.11 <br />
 
 ## Mapping DNA seq reads using BWA
