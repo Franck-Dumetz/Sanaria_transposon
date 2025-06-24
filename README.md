@@ -7,8 +7,9 @@ Biosample SAMN49549112<br />
 SRA <br />
 
 Programs: <br />
-* BWA <br />
+* BWA v0.7.17 <br />
 * RelocaTE2 <br />
+* Samtools v1.11 <br />
 
 ## Mapping DNA seq reads using BWA
 ```
@@ -22,7 +23,13 @@ Number of reads
 ```
 zgrep '@' 1_R1_001.fastq.gz | wc -l
 ```
-
-
-
+Number of mapping reads (Primary alignments and Supplementary alignments) <br />
+to the transposon
+```
+samtools view -c -F 4 Transposon_sorted.bam
+```
+to the genome of _A. stephensi_ <br />
+```
+samtools view -c -F 4 Astephensi_sorted.bam
+```
 
