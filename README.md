@@ -6,6 +6,10 @@ Bioproject PRJNA1281180 <br />
 Biosample SAMN49549112<br />
 SRA <br />
 
+Programs: <br />
+* BWA <br />
+* RelocaTE2 <br />
+
 ## Mapping DNA seq reads using BWA
 ```
 bwa index Driver_insert.fasta
