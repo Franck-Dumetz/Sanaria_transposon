@@ -16,7 +16,7 @@ Programs: <br />
 bwa index Driver_insert.fasta
 bwa index VectorBase-68_AstephensiSDA-500_Genome.fasta
 ```
-Use [DNAseq_mapping_BWA](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/DNAseq_mapping_BWA) to align the sequencing reads to the reference genome<br />
+Use [DNAseq_mapping_BWA.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/DNAseq_mapping_BWA.sh) to align the sequencing reads to the reference genome<br />
 ## Transposon insertion in _Anopheles stephensi_
 
 Number of reads 
