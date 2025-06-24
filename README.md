@@ -32,5 +32,5 @@ to the genome of _A. stephensi_ <br />
 ```
 samtools view -c -F 4 Astephensi_sorted.bam
 ```
-Use [Hydrid_reads_finding.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/Hydrid_reads_finding.sh) to indetify the hybrid reads
+Use [Hydrid_reads_finding.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/Hydrid_reads_finding.sh) to identify the hybrid reads <br />
 Use [Relocate_id.py]()
