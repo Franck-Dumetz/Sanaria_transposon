@@ -8,7 +8,7 @@ SRA <br />
 
 Programs: <br />
 * BWA v0.7.17 <br />
-* RelocaTE2 <br />
+* ngs_te_mapper2 <br />
 * Samtools v1.11 <br />
 
 ## Mapping DNA seq reads using BWA
@@ -33,11 +33,17 @@ to the genome of _A. stephensi_ <br />
 samtools view -c -F 4 Astephensi_sorted.bam
 ```
 Use [Hydrid_reads_finding.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/Hydrid_reads_finding.sh) to identify the hybrid reads <br />
-Use 
-ngs_te_mapper2 -f /local/projects-t3/S
-erreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R1_001.fastq.gz,/local/proje
-cts-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R2_001.fastq.gz  -l 
-/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/Driver_insert.fasta  -r /local/proj
-ects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta  
--o /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions  -p Astephe
-nsi_transposon  -t 12
+
+Using ngs_te_mapper2 to map transposable elements:
+Create a local writable RepeatMasker library
+```
+mkdir -p ~/RepeatMasker_Lib
+cp /usr/local/packages/miniconda3/envs/ngs_te_mapper2/share/RepeatMasker/Libraries/* /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/RepeatMasker_Lib
+```
+```
+export REPEATMASKER_LIB_DIR=/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/RepeatMasker_Lib
+```
+Run ngs_te_mapper2
+```
+ngs_te_mapper2 -f /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R1_001.fastq.gz,/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R2_001.fastq.gz -l /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/Driver_insert.fasta -r /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta -o /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions -p Astephensi_transposon -t 12
+```
