@@ -4,7 +4,7 @@ Publication: <br />
 
 Bioproject PRJNA1281180 <br />
 Biosample SAMN49549112<br />
-SRA <br />
+SRA RR34189523 <br />
 
 Programs: <br />
 * BWA v0.7.17 <br />
