@@ -36,7 +36,7 @@ to the genome of _A. stephensi_ <br />
 samtools view -c -F 4 Astephensi_sorted.bam
 ```
 
-Using ngs_te_mapper2 to map transposable elements: <br />
+### Using ngs_te_mapper2 to map transposable elements: <br />
 Index the reference genome
 ```
 bwa index /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta
