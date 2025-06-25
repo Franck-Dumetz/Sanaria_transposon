@@ -10,6 +10,9 @@ Programs: <br />
 * BWA v0.7.17 <br />
 * [ngs_te_mapper2](https://github.com/bergmanlab/ngs_te_mapper2) <br />
 * Samtools v1.11 <br />
+<br />
+All data regarding the genome, annotation and other aspects of the genome of _A. stephensi_ were downloaded from VectorDB, version 68<br />
+
 
 ## Mapping DNA seq reads using BWA
 ```
