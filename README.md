@@ -1,6 +1,6 @@
 # Sanaria_transposon
 
-Publication: <br />
+Publication: Successful insertion and expression of a tetracycline transactivator in Anopheles stephensi associated with increased egg production and decreased hatching rate <br />
 
 Bioproject PRJNA1281180 <br />
 Biosample SAMN49549112<br />
