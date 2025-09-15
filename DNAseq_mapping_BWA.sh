@@ -1,16 +1,16 @@
 #!/bin/bash
 
 #SBATCH --job-name=bwa_transposon
-#SBATCH --output=/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/transposon/transposon_bwa.out
-#SBATCH --error=/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/transposon/transposon_bwa.err
-#SBATCH --mail-type=BEGIN,END --mail-user=fdumetz@som.umaryland.edu
+#SBATCH --output=PATH/transposon_bwa.out
+#SBATCH --error=PATH/transposon_bwa.err
+#SBATCH --mail-type=BEGIN,END --mail-user=
 #SBATCH --cpus-per-task=12
 #SBATCH --mem=80G
 
 # ----------- USER-DEFINED VARIABLES -------------
-BWA_INDEX="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/Driver_insert.fasta"  # BWA index basename (e.g., genome.fa + genome.fa.bwt etc.)
-SAMPLE_DIR="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi"
-OUTPUT_DIR="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/transposon"
+BWA_INDEX="PATH/Driver_insert.fasta"  # BWA index basename (e.g., genome.fa + genome.fa.bwt etc.)
+SAMPLE_DIR="PATH/Sanaria/30-1179934119/Astephensi"
+OUTPUT_DIR="PATH/Sanaria/transposon"
 THREADS=12
 
 # Get the input read files
