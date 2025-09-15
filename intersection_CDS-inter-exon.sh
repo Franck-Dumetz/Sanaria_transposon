@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # === Input files ===
-INSERTIONS="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions/Astephensi_transposon.nonref.bed"
-ANNOTATION="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions/VectorBase-68_AstephensiSDA-500.gff"
+INSERTIONS="PATH/output_te_insertions/Astephensi_transposon.nonref.bed"
+ANNOTATION="PATH/output_te_insertions/VectorBase-68_AstephensiSDA-500.gff"
 
 # === Temporary filtered GFF files ===
 CDS="cds.gff"
@@ -15,7 +15,7 @@ EXON_OUT="insertions_in_exons.tmp"
 GENE_OUT="insertions_in_genes.tmp"
 INTERGENIC_OUT="insertions_intergenic.tmp"
 
-FINAL_OUT="/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions/insertions_annotated.tsv"
+FINAL_OUT="PATH/output_te_insertions/insertions_annotated.tsv"
 
 # === Step 1: Extract feature types ===
 awk '$3 == "CDS"' "$ANNOTATION" > "$CDS"
