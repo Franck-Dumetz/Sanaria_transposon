@@ -39,19 +39,19 @@ samtools view -c -F 4 Astephensi_sorted.bam
 ### Using ngs_te_mapper2 to map transposable elements: <br />
 Index the reference genome
 ```
-bwa index /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta
-samtools faidx /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta
+bwa index VectorBase-68_AstephensiSDA-500_Genome.fasta
+samtools faidx VectorBase-68_AstephensiSDA-500_Genome.fasta
 ```
 Create a local writable RepeatMasker library
 ```
 mkdir -p ~/RepeatMasker_Lib
-cp /usr/local/packages/miniconda3/envs/ngs_te_mapper2/share/RepeatMasker/Libraries/* /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/RepeatMasker_Lib
+cp /usr/local/packages/miniconda3/envs/ngs_te_mapper2/share/RepeatMasker/Libraries/* PATH/RepeatMasker_Lib
 ```
 ```
-export REPEATMASKER_LIB_DIR=/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/RepeatMasker_Lib
+export REPEATMASKER_LIB_DIR=PATH/RepeatMasker_Lib
 ```
 Run ngs_te_mapper2
 ```
-ngs_te_mapper2 -f /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R1_001.fastq.gz,/local/projects-t3/SerreDLab-3/fdumetz/Sanaria/30-1179934119/Astephensi/1_R2_001.fastq.gz -l /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/Driver_insert.fasta -r /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/VectorBase-68_AstephensiSDA-500_Genome.fasta -o /local/projects-t3/SerreDLab-3/fdumetz/Sanaria/output_te_insertions -p Astephensi_transposon -t 12
+ngs_te_mapper2 -f PATH/1_R1_001.fastq.gz,PATH/1_R2_001.fastq.gz -l PATH/Driver_insert.fasta -r PATH/VectorBase-68_AstephensiSDA-500_Genome.fasta -o PATH/output_te_insertions -p Astephensi_transposon -t 12
 ```
 Then CDS, exonic or intergenic regions were annotated using [intersection_CDS-inter-exon.sh](https://github.com/Franck-Dumetz/Sanaria_transposon/blob/main/intersection_CDS-inter-exon.sh)
